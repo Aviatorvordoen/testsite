@@ -1,0 +1,278 @@
+/* index slyles */
+
+html{
+    background-color: #37404f;
+    overflow: hidden;
+}
+
+
+.body_content_center
+{
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.text {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+
+/*ldza chart*/
+
+
+.gerenal_nav_menu_skel 
+{
+    background-color: #37404f;
+    color: #fff;
+    margin-left: -8px;
+    margin-top: -8px;
+    width: 100vw;
+
+}
+
+.airportopt 
+{
+    background-color: #37404f;
+    color: white;
+    border: none;
+}
+.airport_charts_chapters 
+{
+    background-color: #37404f;
+    color: white;
+    border: none;
+}
+
+.view_contant
+{
+    margin-left: -9px;
+    margin-bottom: -4px;
+    z-index: -1;
+
+}
+
+.frclass 
+{
+    background-color: #fff;
+    border: none;
+    width: 101vw;
+    height: 94.2vh;
+}
+
+.lower_menu_skel 
+{
+    background-color: #37404f;
+    color: #fff;
+    margin-left: -9px;
+    width: 100vw;
+}
+
+.btclass 
+{
+    background-color: #37404f;
+    color: white;
+    border: none;
+}
+
+
+/* menus */
+
+.refmenu_list 
+{
+    width: 300px;
+    height: 400px;
+    display: none;
+    background-color: #37404f;
+    position: absolute;
+    z-index: 2;
+    overflow: auto;
+}
+.comenu_list 
+{
+    width: 300px;
+    height: 400px;
+    display: none;
+    background-color: #37404f;
+    position: absolute;
+    z-index: 2;
+    overflow: auto;
+}
+.starmenu_list 
+{
+    width: 300px;
+    height: 400px;
+    display: none;
+    background-color: #37404f;
+    position: absolute;
+    z-index: 2;
+    overflow: auto;
+}
+.apprmenu_list 
+{
+    width: 300px;
+    height: 400px;
+    display: none;
+    background-color: #37404f;
+    position: absolute;
+    z-index: 2;
+    overflow: auto;
+}
+.taximenu_list 
+{
+    width: 300px;
+    height: 400px;
+    display: none;
+    background-color: #37404f;
+    position: absolute;
+    z-index: 2;
+    overflow: auto;
+}
+.sidmenu_list 
+{
+    width: 300px;
+    height: 400px;
+    display: none;
+    background-color: #37404f;
+    position: absolute;
+    z-index: 2;
+    overflow: auto;
+}
+
+
+.dropdown_menu_toggle
+{
+    width: 300px;
+    height: 400px;
+    background-color: #37404f;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    margin-left: -8px;
+}
+
+
+.airport_charts_chapters_clicked
+{
+    background-color: blue;
+}
+
+
+/* decorate links for charts*/
+
+.taxilinks
+{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.starlinks
+{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.apprlinks
+{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.sidslinks
+{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.hinttext 
+{
+    text-align: center;
+    color: white;
+
+}
+.runw 
+{
+    color: lightgreen;
+    text-align: center;
+
+}
+.pagehint 
+{
+    text-align: center;
+    background-color: yellow;
+    color: black;
+
+}
+
+.airport_options_list
+{
+    background-color: #37404f;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    margin-left: -8px;
+    padding-left: 4px;
+    padding-right: 4px;
+    overflow: auto;
+    height: 300px;
+}
+
+
+.airportopt_clicked
+{
+    background-color: blue;
+}
+
+.dropdown_menu_list_show
+{
+    display: block;
+}
+
+
+.texthint 
+{
+    color: black;
+    text-align: center;
+    background-color: orange;
+}
+.origin_airport 
+{
+    text-decoration: none;
+    color: white;
+}
+.destination_airport 
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* flights page */
+
+.title_container 
+{
+    background-color: #37404f;
+    color: #fff;
+    text-align: center;
+
+}
+
+.actions_container 
+{
+    margin-top: 10px;
+    align-items: center;
+}
+.actions {
+}
