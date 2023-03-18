@@ -219,7 +219,7 @@ function Maptoggle(){
 }
 
 function Show_runways_information(){
-    frame.src = './runwaysinf.html';
+    frame.src = './testpage.html';
 }
 
 
