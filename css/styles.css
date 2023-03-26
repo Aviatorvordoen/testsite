@@ -258,6 +258,26 @@ html{
     color: #fff;
 }
 
+.find_airport_input_field
+{
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+
+
+.find_airport
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.material-symbols-outlined
+{
+    color: #fff;
+    cursor: pointer;
+}
 
 /* flights page */
 
@@ -274,5 +294,160 @@ html{
     margin-top: 10px;
     align-items: center;
 }
+
 .actions {
+    background-color: #37404f;
+    color: #fff;
+    border: none;
+}
+
+/*List of flights */
+
+.flightlogscontainer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow-y: auto;
+}
+.data {
+    position: absolute;
+    background-color: yellow;
+    color: black;
+}
+.flightlogdepature {
+    position: absolute;
+    color: #fff;
+}
+.flightlogarrival {
+    position: absolute;
+    color: #fff;
+}
+.flightlogtimeenroute {
+    position: absolute;
+    color: #fff;
+}
+
+
+/* create new flight page */
+
+.New_flight_container 
+{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+.new_flight_items {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+#depid
+{
+    position: absolute;
+}
+
+#arrid
+{
+    margin-top: 30px;
+    position: absolute;
+}
+
+#gf
+{
+    width: 70px;
+}
+
+
+
+.newflight_text 
+{
+    color: #fff;
+
+}
+
+.textmeny {
+    height: 250px;
+    width: 300px;
+}
+
+
+.warn
+{
+    border-color: red;
+
+}
+
+.routehint {
+    margin-top: 40px;
+    color: #fff;
+}
+
+
+.sc {
+    color: #fff;
+}
+
+
+
+/* acs page */
+
+.myacs_container
+{
+    text-align: center;
+    font-size: 40px;
+    color: lime;
+}
+
+.subtext_acs_container
+{
+    color: #fff;
+}
+
+
+
+/*RWY INFO PAGE*/
+
+.rwyinf_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    position: absolute;
+}
+
+.rwy_number {
+    background-color: orange;
+    color: black;
+}
+
+.crs {
+    color: #fff;
+}
+.gs {
+    color: #fff;
+}
+.appr_types {
+    color: #fff;
+}
+.appr_type_rwy {
+    color: #fff;
+}
+.elev {
+    color: #fff;
+}
+.rwy {
+    color: #fff;
+}
+.tch {
+    color: #fff;
+}
+
+/* table style */
+#tbl
+{
+    color: #fff;
 }

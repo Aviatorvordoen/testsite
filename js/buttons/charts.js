@@ -1,11 +1,22 @@
 // page load
 window.onload = () => {
     body_html.classList.remove('body_content_center');
-    
+    localStorage.removeItem("Departure")
+    localStorage.removeItem("Arrival")
+    localStorage.removeItem("Route")
+
 }
 
+// LocalStorage
+let depvar = localStorage.getItem("Departure")
+let arrvvar = localStorage.getItem("Arrival")
+let noappl = localStorage.getItem('NotApplicabte')
+
+// VARS
 
 // get elements
+const DEPLABEL = document.getElementById('deplnk')
+const ARRVLABEL = document.getElementById('arrvlnk')
 const body_html = document.querySelector('body')
 const AIRPORTOPT_BUTTON = document.querySelector('.airportopt')
 const frame = document.querySelector('.frclass')
@@ -15,14 +26,16 @@ const AIPRORT_CHART_CHAPTER_ACC3 = document.getElementById('acc3')
 const AIPRORT_CHART_CHAPTER_ACC4 = document.getElementById('acc4')
 const AIPRORT_CHART_CHAPTER_ACC5 = document.getElementById('acc5')
 const AIPRORT_CHART_CHAPTER_ACC6 = document.getElementById('acc6')
-const AIRPORT_MAP = document.getElementById('mbtn')
+const acs = document.getElementById('acsbtn')
+const comm = document.getElementById('commid')
 const RUNWAYS_INF_BUTTON = document.getElementById('rwy')
 const WX_BUTTON = document.getElementById('wxid')
 const RETURN_BUTTON = document.querySelector('.returnmark')
 const RTE_CREATE_BUTTON = document.querySelector('.goflight')
-const SEARCH_BUTTON = document.querySelector('.material-symbols-outlined')
 const ARROW = document.getElementById('mso_span')
 const FLIGHTS = document.getElementById('bflt')
+const SEARCH_BTN = document.getElementById('mso_search')
+
 // CONST FOR MENU
 
 const AIRPORT_MENU = document.querySelector('.airport_options_list')
@@ -50,7 +63,9 @@ const AIRPROT_LIST_LOWER =
     'lsme', 'ebbr'
 ]
 // functions
-function GetAirportOptions(){
+
+
+function GetAirportOptions(event){
     // change light sel
     AIRPORTOPT_BUTTON.classList.toggle('airportopt_clicked')
     AIPRORT_CHART_CHAPTER_ACC1.classList.remove('airport_charts_chapters_clicked')
@@ -61,8 +76,6 @@ function GetAirportOptions(){
     AIPRORT_CHART_CHAPTER_ACC6.classList.remove('airport_charts_chapters_clicked')
 
 
-
-
     // show dropdown menu
     AIRPORT_MENU.classList.toggle('dropdown_menu_list_show')
     REF_MENU.classList.remove('dropdown_menu_list_show')
@@ -71,6 +84,9 @@ function GetAirportOptions(){
     APPR_MENU.classList.remove('dropdown_menu_list_show')
     TAXI_MENU.classList.remove('dropdown_menu_list_show')
     SID_MENU.classList.remove('dropdown_menu_list_show')
+
+
+
 
 
 
@@ -214,12 +230,12 @@ function OpenACC_Menu6(){
     SID_MENU.classList.toggle('dropdown_menu_list_show')
 }
 
-function Maptoggle(){
-    frame.src = '/img/ldza/ldza_map_view.jpg';
+function acstoggle(){
+    frame.src = './acs.html';
 }
 
 function Show_runways_information(){
-    frame.src = './testpage.html';
+    frame.src = './runwaysinf.html';
 }
 
 
@@ -269,6 +285,28 @@ function OpenMyFlightsPage(){
     frame.src = './MyFlights.html';
 }
 
+function OpenCommPage()
+{
+    frame.src="./comms.html"
+}
+
+
+function FindNeedAirport()
+{
+    let find_input = document.getElementById('airf').value
+    if (find_input == '')
+    {
+        alert("No find airport!")
+    }
+
+    if (find_input == "LIML")
+    {
+        window.location.href= './liml_chart.html'
+
+    }
+
+}
+
 // bind functions
 AIRPORTOPT_BUTTON.addEventListener('click', GetAirportOptions)
 AIPRORT_CHART_CHAPTER_ACC1.addEventListener('click', OpenACC_Menu1)
@@ -277,15 +315,11 @@ AIPRORT_CHART_CHAPTER_ACC3.addEventListener('click', OpenACC_Menu3)
 AIPRORT_CHART_CHAPTER_ACC4.addEventListener('click', OpenACC_Menu4)
 AIPRORT_CHART_CHAPTER_ACC5.addEventListener('click', OpenACC_Menu5)
 AIPRORT_CHART_CHAPTER_ACC6.addEventListener('click', OpenACC_Menu6)
-AIRPORT_MAP.addEventListener('click', Maptoggle)
+acs.addEventListener('click', acstoggle)
+comm.addEventListener('click', OpenCommPage)
 RUNWAYS_INF_BUTTON.addEventListener('click', Show_runways_information)
 WX_BUTTON.addEventListener('click', getwx)
 FLIGHTS.addEventListener('click', OpenMyFlightsPage)
-
-// FLIGHT MENU
-//RETURN_BUTTON.addEventListener('click', BackToChart)
-//RTE_CREATE_BUTTON.addEventListener('click', ToInputFieldGetValue)
-//SEARCH_BUTTON.addEventListener('click', Getqueryairport)
-//ARROW.addEventListener('click', ChageValue)
+SEARCH_BTN.addEventListener('click', FindNeedAirport)
 
 

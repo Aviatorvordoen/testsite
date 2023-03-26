@@ -1,11 +1,23 @@
 const LIST_OF_FLIGHTS = document.getElementById('act1')
-const fs = require('fs');
+const ADD_FLIGHT = document.getElementById('act2')
+const CURRENT_FLIGHT = document.getElementById('act3')
 
-function Readedfile (){
-  let file_readed = fs.readFileSync('../docs/text.txt', 'utf8')
-  console.log(file_readed);
 
+function gotocurrent()
+{
+  window.location.href = "enroute.html"
 }
 
+function Getlist()
+{
+  window.location.href = "listofflts.html";
+}
 
-LIST_OF_FLIGHTS.addEventListener('click', Readedfile)
+function CreateNewFlight()
+{
+  window.location.href = "createflight.html";
+}
+
+LIST_OF_FLIGHTS.addEventListener('click', Getlist)
+ADD_FLIGHT.addEventListener('click', CreateNewFlight)
+CURRENT_FLIGHT.addEventListener('click', gotocurrent)
